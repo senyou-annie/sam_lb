@@ -1,5 +1,6 @@
 node_modules/
 .aws-sam/
 .DS_Store
+credentials
 template.yaml
 google-sheet.json
