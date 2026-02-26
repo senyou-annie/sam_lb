@@ -41,15 +41,15 @@ async function writeTestRowToSheet() {
   const now = new Date().toISOString();
 
   const rowData = [
-    "TEST_URL",
+    "TEST_URL_NEW",
     now,
     "TEST_ASSESSMENT_NO",
-    "テスト太郎",
-    "090-0000-0000",
-    "test@example.com",
-    "東京都",
-    "テストメーカー",
-    "テスト車種",
+    "TEST_NAME",
+    "TEST_TEL",
+    "TEST_EMAIL",
+    "TEST_PREFECTURE",
+    "TEST_MAKER_NAME",
+    "TEST_CAR_NAME",
   ];
 
   await sheets.spreadsheets.values.append({
