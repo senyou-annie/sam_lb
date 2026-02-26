@@ -1,0 +1,8 @@
+{
+  "name": "sam-testing-write-google-sheet",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "googleapis": "^148.0.0"
+  }
+}

@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM test - Write Data Google Sheet Lambda only (no SQS)
+
+Parameters:
+  Stage:
+    Type: String
+    Default: staging
+    AllowedValues:
+      - staging
+      - production
+
+Globals:
+  Function:
+    Runtime: nodejs20.x
+    Timeout: 300
+    MemorySize: 1024
+    Environment:
+      Variables:
+        STAGE: !Ref Stage
+
+Resources:
+  WriteDataGoogleSheetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub gaisha-oh-write-data-google-sheet-${Stage}
+      CodeUri: ./
+      Handler: write-data-google-sheet.handler
+
+Outputs:
+  WriteDataGoogleSheetFunctionName:
+    Value: !Ref WriteDataGoogleSheetFunction

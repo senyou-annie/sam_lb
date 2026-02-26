@@ -1,0 +1,15 @@
+version = 0.1
+
+# No profile here: use your other-account profile when running deploy, e.g.:
+#   sam deploy --profile YOUR_PROFILE
+# or set:  export AWS_PROFILE=YOUR_PROFILE
+
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "write-gss-test"
+region = "ap-northeast-1"
+capabilities = "CAPABILITY_IAM"
+confirm_changeset = true
+resolve_s3 = true
+# No s3_bucket / s3_prefix: SAM will create and use a deployment bucket in your account
