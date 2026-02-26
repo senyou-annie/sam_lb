@@ -1,2 +1,4 @@
 node_modules/
 .aws-sam/
+.DS_Store
+google-sheet.json
